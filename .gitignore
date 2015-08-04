@@ -1,0 +1,7 @@
+.sass-cache
+.sass-cache/*
+js/*
+css/*
+**/.DS_Store
+**/style.css
+**/scripts.js

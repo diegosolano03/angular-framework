@@ -1,0 +1,18 @@
+@import "compass/css3";
+@import "libs";
+@import "fonts";
+@import "vars";
+@import "modules";
+
+body{
+
+}
+
+#view{
+	@include transition(all 1s);
+} 
+#view.wait{ opacity: 0; }
+
+footer{
+
+}

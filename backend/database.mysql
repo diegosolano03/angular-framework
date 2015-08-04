@@ -1,0 +1,77 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.10.7
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tiempo de generación: 27-07-2015 a las 10:56:44
+-- Versión del servidor: 5.5.41-cll-lve
+-- Versión de PHP: 5.4.23
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Base de datos: `lanco_ca-dia-de-la-madre-2015`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `facebook`
+--
+
+CREATE TABLE IF NOT EXISTS `facebook` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fb_id` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `user_id` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fb_id` (`fb_id`(333))
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_card` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_card` (`id_card`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=43 ;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `id_card`, `name`, `email`) VALUES
+(1, '206860157', 'Víctor Araya Jiiménez', 'vic9511@hotmail.com'),
+(23, '12312321321', 'aewasdasdsad', 'asd@asdasd'),
+(16, '1238781923', 'Carlos Murillo', 'carloss@gmail.com'),
+(22, '11213213123213', 'Victor Araya', 'asdsa@asdas'),
+(25, '1231231231', 'asdasdasasdas', 'aa@asdasd'),
+(24, '11111', 'Victor2', 'vic@v1ic2.com'),
+(21, '333445553', 'Federico Bazo', 'fede@teah.com'),
+(26, '12312312312312', 'aasdasdasd', 'as@asd.as'),
+(27, '123456788', 'aaaaaaaaaa', 'a@a'),
+(28, '1234567', 'araya araya', 'a@a.a'),
+(29, '21312312312', 'asdasdasasd', 'a@aaaa'),
+(30, '13123123123121', 'aaaasdasdasdsa', 'a@a.aaaaa'),
+(31, '21371283712', 'ashdbasjdas', 'a@a.aasdas'),
+(32, '123123123', 'aaaaaaaaaaa', 'asd@asd'),
+(33, '73973189311', 'basdasdbkjd', 'as@asd'),
+(34, '123123321321', 'asdasdasdas', 'a@asd'),
+(35, '12731238912', 'asjdnaskjas', 'as@asdasd'),
+(36, '203783287828373', 'Victor Araya J', 'vic95111@hotmail.com'),
+(37, '12388791233', 'ajndasjlkndlajsk', 'akjsdnjdaks@aslkdl'),
+(38, '31221211221', 'Diego Solano', 'Diego@teah.com'),
+(39, '12311233123213', 'asdasdasdsadsaasd', 'asd@asd2asd'),
+(40, '1234567890', 'Juan ARaya', 'juan@araya.com'),
+(41, '12345678901', 'Carlos JimÃ©nez', 'carlos@gmail.com'),
+(42, '114580247', 'Diego Solano', 'diego.solano@teahdigital.com');
